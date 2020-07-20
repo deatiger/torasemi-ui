@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "baseUrl": "src",    // Do not need to write relative paths
+    "forceConsistentCasingInFileNames": true,
+    "jsx": "react",
+    "lib": ["esnext", "dom"],
+    "module": "es2015",
+    "moduleResolution": "node",
+    "noImplicitReturns": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "sourceMap": true,
+    "strict": true,
+    "target": "es5",
+    "types": ["react", "jest"] // https://github.com/DefinitelyTyped/DefinitelyTyped/issues/33311#issuecomment-466731156
+  },
+  "exclude": ["node_modules"],
+  "include": ["src/**/*"]
+}
