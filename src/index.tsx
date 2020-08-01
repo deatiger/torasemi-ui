@@ -1,10 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-const title = 'Hello, React!';
 ReactDOM.render(
-    <div>
-        <p>{title}</p>
-    </div>,
+    <h1>React x TypeScript!</h1>,
     document.getElementById('root')
 );
