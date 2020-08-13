@@ -1,26 +1,16 @@
-import React from 'react';
+import React, {FC} from 'react';
 import styled from 'styled-components';
+import {BaseButton, ButtonProps} from "./BaseButton";
+import {palette} from "../../themes/createPalette";
 
-interface PrimaryButtonProps {
-    label: string
-}
-
-const Button = styled.button({
-    backgroundColor: '#42a5f5',
-    border: 'none',
-    display: 'block',
-    padding: '4px 16px',
-    '&:hover': {
-        backgroundColor: '#80d6ff'
-    }
+const PrimaryStyleButton = styled(BaseButton)({
+  backgroundColor: palette.primary.main,
+  transition: 'all ease .35s',
+  '&:hover': {
+    backgroundColor: palette.primary.dark
+  }
 })
 
-const PrimaryButton = (props: PrimaryButtonProps) => {
-    return (
-        <Button>
-            {props.label}
-        </Button>
-    );
-};
-
-export default PrimaryButton;
+export const PrimaryButton: FC<ButtonProps> = (props) => {
+  return <PrimaryStyleButton {...props} />
+}
